@@ -3,24 +3,27 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "IconGoLocky58.png",
+      "filename" : "IconGoLocky58@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "IconGoLocky80.png",
+      "filename" : "IconGoLocky80@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "IconGoLocky.png",
+      "filename" : "IconGoLocky@2x.png",
       "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "pre-rendered" : true
   }
 }

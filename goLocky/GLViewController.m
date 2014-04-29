@@ -28,10 +28,9 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    NSString * storyboardName = @"main";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"home"];
-    [self presentViewController:vc animated:YES completion:nil];
+//    UITabBarController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tab"];
+//    
+//    [self presentViewController:vc animated:YES completion:nil];
 
 }
 - (void)viewDidLoad
@@ -39,21 +38,20 @@
     [super viewDidLoad];
     
         // Custom initialization
-        
-        // Create a FBLoginView to log the user in with basic, email and likes permissions
+                // Create a FBLoginView to log the user in with basic, email and likes permissions
         // You should ALWAYS ask for basic permissions (basic_info) when logging the user in
         FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"email"]];
         
         // Set this loginUIViewController to be the loginView button's delegate
         loginView.delegate = self;
         
-        // Align the button in the center horizontally
-        loginView.frame = CGRectOffset(loginView.frame,
-               (self.view.center.x - (loginView.frame.size.width /4)),10);
+//        // Align the button in the center horizontally
+//        loginView.frame = CGRectOffset(loginView.frame,
+//               (self.view.center.x - (loginView.frame.size.width /80)),6);
 
         // Align the button in the center vertically
-//        loginView.center = self.view.center;
-            
+        loginView.center = self.view.center;
+    
         // Add the button to the view
         [self.view addSubview:loginView];
     
