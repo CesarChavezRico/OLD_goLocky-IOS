@@ -28,9 +28,9 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-//    UITabBarController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tab"];
-//    
-//    [self presentViewController:vc animated:YES completion:nil];
+    UITabBarController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tab"];
+    
+    [self presentViewController:vc animated:YES completion:nil];
 
 }
 - (void)viewDidLoad
