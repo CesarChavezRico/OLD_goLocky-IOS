@@ -22,6 +22,8 @@
     self.profilePicture.profileID = user.id;
     self.name.text = user.name;
     self.email.text = user.username;
+   
+
 }
 
 - (void)viewDidLoad
@@ -38,11 +40,11 @@
         // Set this loginUIViewController to be the loginView button's delegate
         loginView.delegate = self;
         
-        // Align the button in the center horizontally
-        loginView.frame = CGRectOffset(loginView.frame,
-                                       (self.view.center.x - (loginView.frame.size.width /4)),
-                                       10);
-        
+//        // Align the button in the center horizontally
+//        loginView.frame = CGRectOffset(loginView.frame,
+//                                       (self.view.center.x - (loginView.frame.size.width /4)),
+//                                       10);
+//        
         // Align the button in the center vertically
         loginView.center = self.view.center;
     
