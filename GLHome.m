@@ -65,6 +65,22 @@
 
 }
 
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+//    self.contentSubview.frame = CGRectMake(
+//                                           0,
+//                                           self.topLayoutGuide.length,
+//                                           CGRectGetWidth(self.view.frame),
+//                                           CGRectGetHeight(self.view.frame)
+//                                           - self.topLayoutGuide.length
+//                                           - self.bottomLayoutGuide.length
+//                                           ); 
+}
+
+
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
