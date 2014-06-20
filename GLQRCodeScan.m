@@ -81,15 +81,27 @@
             NSString *code =[(AVMetadataMachineReadableCodeObject *)metadata stringValue];
             
             // Si el código no esta vacío
-            if (![code isEqualToString:@""]) {
+            if ([code isEqualToString:@"goLocky"]) {
                 
                 // Marcamos nuestro flag de detección a YES
                 self.codeDetected = YES;
                 
-                // Mostramos al usuario un alert con los datos del tipo de código y valor
-                // detectado en nuestra sesión
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Código detectado" message:[NSString stringWithFormat:@"%@ \n %@",metadata.type,code] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                UINavigationController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"aprobandoQR"];
+                
+                [self presentViewController:vc animated:NO completion:nil];
+
+            }
+            else{
+                // Marcamos nuestro flag de detección a NO
+                self.codeDetected = YES;
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Código detectado" message:[NSString stringWithFormat:@"%@ \n %@",metadata.type,code]
+                                                               delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                 [alert show];
+                //UINavigationController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"aprobandoQR"];
+                
+                //[self presentViewController:vc animated:NO completion:nil];
+
+                
             }
         }
         

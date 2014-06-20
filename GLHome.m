@@ -9,6 +9,7 @@
 #import "GLHome.h"
 #import "GLMapViewAnnotation.h"
 #import "GLCustomCell.h"
+//#import "GLTabBar.h"
 
 @implementation GLHome
 @synthesize mapView,lugares;
@@ -26,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
     //Map View
     self.mapView.delegate = self;
     CLLocationCoordinate2D location;
