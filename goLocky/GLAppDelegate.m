@@ -13,6 +13,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // agregar splansh screen
+    
     // Override point for customization after application launch.
     [FBProfilePictureView class];
     
